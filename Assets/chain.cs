@@ -17,7 +17,6 @@ public class chain : MonoBehaviour
     void Update()
     {
         Vector3 currentScale = transform.localScale;
-        Debug.Log(currentScale);
         if(Input.GetKey(KeyCode.S))
         {
             print("Running");

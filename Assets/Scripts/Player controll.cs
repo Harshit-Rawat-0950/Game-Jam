@@ -16,6 +16,7 @@ public class Playercontroll : MonoBehaviour
     [SerializeField] KeyCode MoveLeft;
     [SerializeField] KeyCode MoveDown;
     [SerializeField] Rigidbody2D rb;
+    [SerializeField] float airFactor;
     [SerializeField] float Baseforce;
     [SerializeField] float maxGroundVelocity = 10;
     [SerializeField] float maxAirVelocity = 5;
@@ -56,15 +57,14 @@ public class Playercontroll : MonoBehaviour
         }
         else
         {
-            
             force=Baseforce*(maxAirVelocity*xInput-velocity.x);
             if(xInput > 0 && math.abs(rb.velocity[0])<=math.abs(maxAirVelocity))
             {
-                rb.AddForce(Vector2.right*force,ForceMode2D.Force);
+                rb.AddForce(Vector2.right*force*airFactor,ForceMode2D.Force);
             }
             else if (xInput < 0 &&math.abs(rb.velocity[0])<=maxAirVelocity)
             {
-                rb.AddForce(Vector2.right*force,ForceMode2D.Force);
+                rb.AddForce(Vector2.right*force*airFactor,ForceMode2D.Force);
             }
             else
             {
