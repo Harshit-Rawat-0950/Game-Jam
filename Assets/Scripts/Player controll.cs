@@ -80,11 +80,17 @@ public class Playercontroll : MonoBehaviour
         RaycastHit2D rightFoot = Physics2D.Raycast(rightFootP.position,-transform.up, groundCheckDistance);
         Debug.DrawRay(rightFootP.position,-transform.up*groundCheckDistance);
         
-        if((leftFoot || rightFoot) && (leftFoot.collider.tag == "Ground" || leftFoot.collider.tag == "chain" || rightFoot.collider.tag == "Ground" || rightFoot.collider.tag == "chain" )) 
+        if((leftFoot || rightFoot) ) 
         {
-            Debug.Log("GG");
-            return true;
+            if(leftFoot.collider.tag == "Ground" || leftFoot.collider.tag == "chain" || rightFoot.collider.tag == "Ground" || rightFoot.collider.tag == "chain" )
+            {
+
+                // Debug.Log("GG");
+                return true;
+            }
         }
+
+
 
         return false;
     }
