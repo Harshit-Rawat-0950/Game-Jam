@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Devfest 4 game jam.sln"
+    "dotnet.defaultSolution": "Game-Jam.sln"
 }

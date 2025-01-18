@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 64326512}
   m_Layer: 0
   m_Name: Chain element (4)
-  m_TagString: Untagged
+  m_TagString: chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,10 +154,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -227,7 +227,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.16, y: 0.32}
+  m_Size: {x: 0.1, y: 0.29}
   m_Direction: 0
 --- !u!212 &64326514
 SpriteRenderer:
@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 198653915}
   m_Layer: 0
   m_Name: Chain element (2)
-  m_TagString: Untagged
+  m_TagString: chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -328,10 +328,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -401,7 +401,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.16, y: 0.32}
+  m_Size: {x: 0.1, y: 0.29}
   m_Direction: 0
 --- !u!212 &198653917
 SpriteRenderer:
@@ -483,7 +483,7 @@ GameObject:
   - component: {fileID: 215218877}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -788,6 +788,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &458629285
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 458629286}
+  m_Layer: 0
+  m_Name: LeftFoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &458629286
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458629285}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.35, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 692551178}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &498857660
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,7 +834,7 @@ GameObject:
   - component: {fileID: 498857662}
   m_Layer: 0
   m_Name: Chain element
-  m_TagString: Untagged
+  m_TagString: chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -820,10 +851,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -893,7 +924,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.16, y: 0.32}
+  m_Size: {x: 0.1, y: 0.29}
   m_Direction: 0
 --- !u!212 &498857664
 SpriteRenderer:
@@ -1153,7 +1184,7 @@ GameObject:
   - component: {fileID: 543253281}
   m_Layer: 0
   m_Name: Chain element (7)
-  m_TagString: Untagged
+  m_TagString: chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1210,10 +1241,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1258,7 +1289,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.16, y: 0.32}
+  m_Size: {x: 0.1, y: 0.29}
   m_Direction: 0
 --- !u!212 &543253284
 SpriteRenderer:
@@ -1327,9 +1358,10 @@ GameObject:
   - component: {fileID: 671574420}
   - component: {fileID: 671574419}
   - component: {fileID: 671574418}
+  - component: {fileID: 671574424}
   m_Layer: 0
   m_Name: Chain element (3)
-  m_TagString: Untagged
+  m_TagString: chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1377,7 +1409,7 @@ SpringJoint2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671574416}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 805767868}
@@ -1428,10 +1460,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1476,7 +1508,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.16, y: 0.32}
+  m_Size: {x: 0.1, y: 0.29}
   m_Direction: 0
 --- !u!212 &671574423
 SpriteRenderer:
@@ -1530,6 +1562,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!233 &671574424
+HingeJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671574416}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 805767868}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: -0.044696465, y: -0.15494213}
+  m_ConnectedAnchor: {x: 0.52029634, y: 0.3866851}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: 0
+    m_UpperAngle: 359
 --- !u!1 &692551176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,10 +1669,12 @@ Transform:
   m_GameObject: {fileID: 692551176}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7033819, w: 0.7108122}
-  m_LocalPosition: {x: -2.1401987, y: -1.1003845, z: -0.09306407}
+  m_LocalPosition: {x: -2.138, y: -1.318, z: -0.09306407}
   m_LocalScale: {x: 0.5436327, y: 0.5360719, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 458629286}
+  - {fileID: 1231990408}
   m_Father: {fileID: 983768951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.602}
 --- !u!50 &692551179
@@ -1633,7 +1692,7 @@ Rigidbody2D:
   m_Mass: 0.25
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.75
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1670,7 +1729,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09de9f842129bcc46ab262b6b09427d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jump: 0
+  leftFootP: {fileID: 458629286}
+  rightFootP: {fileID: 1231990408}
+  jump: 273
   MoveRight: 275
   MoveLeft: 276
   MoveDown: 0
@@ -1678,9 +1739,11 @@ MonoBehaviour:
   Baseforce: 0.75
   maxVelocity: 10
   Drag: 100
-  jumpForce: 0
+  jumpForce: 15
+  groundCheckDistance: 0.15
   isGrounded: 1
-  isJumping: 0
+  rightFootHit: 0
+  leftFootHit: 0
 --- !u!70 &692551182
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1731,7 +1794,7 @@ GameObject:
   - component: {fileID: 699258167}
   m_Layer: 0
   m_Name: Chain element (1)
-  m_TagString: Untagged
+  m_TagString: chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1748,10 +1811,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1821,7 +1884,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.16, y: 0.32}
+  m_Size: {x: 0.1, y: 0.29}
   m_Direction: 0
 --- !u!212 &699258169
 SpriteRenderer:
@@ -1905,7 +1968,7 @@ GameObject:
   - component: {fileID: 700575839}
   m_Layer: 0
   m_Name: Chain element (4)
-  m_TagString: Untagged
+  m_TagString: chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1922,10 +1985,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1995,7 +2058,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.16, y: 0.32}
+  m_Size: {x: 0.1, y: 0.29}
   m_Direction: 0
 --- !u!212 &700575841
 SpriteRenderer:
@@ -2094,10 +2157,12 @@ Transform:
   m_GameObject: {fileID: 805767865}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7033819, w: 0.7108122}
-  m_LocalPosition: {x: -2.169, y: 1.679, z: -0.09306407}
+  m_LocalPosition: {x: -1.875, y: 1.911, z: -0.09306407}
   m_LocalScale: {x: 0.5436327, y: 0.5360719, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1997478613}
+  - {fileID: 1211287275}
   m_Father: {fileID: 220351023}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.602}
 --- !u!70 &805767867
@@ -2150,7 +2215,7 @@ Rigidbody2D:
   m_Mass: 0.25
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.75
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -2187,7 +2252,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09de9f842129bcc46ab262b6b09427d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jump: 0
+  leftFootP: {fileID: 1997478613}
+  rightFootP: {fileID: 1211287275}
+  jump: 119
   MoveRight: 100
   MoveLeft: 97
   MoveDown: 0
@@ -2195,9 +2262,11 @@ MonoBehaviour:
   Baseforce: 1
   maxVelocity: 10
   Drag: 100
-  jumpForce: 0
+  jumpForce: 15
+  groundCheckDistance: 0.15
   isGrounded: 1
-  isJumping: 0
+  rightFootHit: 0
+  leftFootHit: 0
 --- !u!212 &805767871
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2265,7 +2334,7 @@ GameObject:
   - component: {fileID: 936880527}
   m_Layer: 0
   m_Name: Chain element (5)
-  m_TagString: Untagged
+  m_TagString: chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2282,10 +2351,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -2355,7 +2424,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.16, y: 0.32}
+  m_Size: {x: 0.1, y: 0.29}
   m_Direction: 0
 --- !u!212 &936880529
 SpriteRenderer:
@@ -2479,7 +2548,7 @@ GameObject:
   - component: {fileID: 1066221065}
   m_Layer: 0
   m_Name: Chain element (6)
-  m_TagString: Untagged
+  m_TagString: chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2496,10 +2565,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -2569,7 +2638,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.16, y: 0.32}
+  m_Size: {x: 0.1, y: 0.29}
   m_Direction: 0
 --- !u!212 &1066221067
 SpriteRenderer:
@@ -2653,7 +2722,7 @@ GameObject:
   - component: {fileID: 1156880846}
   m_Layer: 0
   m_Name: Chain element (7)
-  m_TagString: Untagged
+  m_TagString: chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2710,10 +2779,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -2758,7 +2827,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.16, y: 0.32}
+  m_Size: {x: 0.1, y: 0.29}
   m_Direction: 0
 --- !u!212 &1156880849
 SpriteRenderer:
@@ -2812,6 +2881,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1211287274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1211287275}
+  m_Layer: 0
+  m_Name: RightFoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1211287275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211287274}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.32, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 805767866}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1231990407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1231990408}
+  m_Layer: 0
+  m_Name: RightFoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1231990408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231990407}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.32, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 692551178}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1498415720
 GameObject:
   m_ObjectHideFlags: 0
@@ -2859,7 +2990,7 @@ GameObject:
   - component: {fileID: 1528576268}
   m_Layer: 0
   m_Name: Chain element
-  m_TagString: Untagged
+  m_TagString: chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2876,10 +3007,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -2949,7 +3080,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.16, y: 0.32}
+  m_Size: {x: 0.1, y: 0.29}
   m_Direction: 0
 --- !u!212 &1528576270
 SpriteRenderer:
@@ -3033,7 +3164,7 @@ GameObject:
   - component: {fileID: 1549338573}
   m_Layer: 0
   m_Name: Chain element (5)
-  m_TagString: Untagged
+  m_TagString: chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3090,10 +3221,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -3138,7 +3269,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.16, y: 0.32}
+  m_Size: {x: 0.1, y: 0.29}
   m_Direction: 0
 --- !u!212 &1549338576
 SpriteRenderer:
@@ -3372,9 +3503,10 @@ GameObject:
   - component: {fileID: 1796072856}
   - component: {fileID: 1796072860}
   - component: {fileID: 1796072861}
+  - component: {fileID: 1796072862}
   m_Layer: 0
   m_Name: Chain element (3)
-  m_TagString: Untagged
+  m_TagString: chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3391,10 +3523,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -3464,7 +3596,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.16, y: 0.32}
+  m_Size: {x: 0.1, y: 0.29}
   m_Direction: 0
 --- !u!212 &1796072858
 SpriteRenderer:
@@ -3540,7 +3672,7 @@ SpringJoint2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796072854}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 692551179}
@@ -3575,6 +3707,31 @@ SpringJoint2D:
   m_Distance: 0.038151145
   m_DampingRatio: 1
   m_Frequency: 200
+--- !u!233 &1796072862
+HingeJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796072854}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 692551179}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0.06428574, y: -0.13029869}
+  m_ConnectedAnchor: {x: -0.4775088, y: 0.6629209}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: 0
+    m_UpperAngle: 359
 --- !u!1 &1845664813
 GameObject:
   m_ObjectHideFlags: 0
@@ -3590,7 +3747,7 @@ GameObject:
   - component: {fileID: 1845664815}
   m_Layer: 0
   m_Name: Chain element (6)
-  m_TagString: Untagged
+  m_TagString: chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3607,10 +3764,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -3680,7 +3837,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.16, y: 0.32}
+  m_Size: {x: 0.1, y: 0.29}
   m_Direction: 0
 --- !u!212 &1845664817
 SpriteRenderer:
@@ -3848,7 +4005,7 @@ GameObject:
   - component: {fileID: 1950171674}
   m_Layer: 0
   m_Name: Chain element (1)
-  m_TagString: Untagged
+  m_TagString: chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3865,10 +4022,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -3938,7 +4095,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.16, y: 0.32}
+  m_Size: {x: 0.1, y: 0.29}
   m_Direction: 0
 --- !u!212 &1950171676
 SpriteRenderer:
@@ -4007,6 +4164,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 220351023}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -125.531}
+--- !u!1 &1997478612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1997478613}
+  m_Layer: 0
+  m_Name: LeftFoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1997478613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997478612}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.32, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 805767866}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2116814737
 GameObject:
   m_ObjectHideFlags: 0
@@ -4022,7 +4210,7 @@ GameObject:
   - component: {fileID: 2116814739}
   m_Layer: 0
   m_Name: Chain element (2)
-  m_TagString: Untagged
+  m_TagString: chain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4039,10 +4227,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -4112,7 +4300,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.16, y: 0.32}
+  m_Size: {x: 0.1, y: 0.29}
   m_Direction: 0
 --- !u!212 &2116814741
 SpriteRenderer:

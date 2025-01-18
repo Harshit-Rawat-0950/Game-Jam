@@ -19,7 +19,7 @@ public class Playercontroll : MonoBehaviour
     [SerializeField] float maxVelocity;
     [SerializeField] float Drag;
     [SerializeField] float jumpForce;
-    [SerializeField] int groundCheckDistance;
+    [SerializeField] float groundCheckDistance;
     float force;
     public bool isGrounded=true;
     public bool rightFootHit;
@@ -47,9 +47,11 @@ public class Playercontroll : MonoBehaviour
     }
     bool checkforground()
     {
-        RaycastHit2D leftFoot = Physics2D.Raycast(leftFootP.position,-transform.up,groundCheckDistance);
-        RaycastHit2D righFoot = Physics2D.Raycast(rightFootP.position,-transform.up,groundCheckDistance);
-        if(leftFoot&&leftFoot.collider.tag=="Ground"||righFoot&&righFoot.collider.tag=="Ground") 
+        RaycastHit2D leftFoot = Physics2D.Raycast(leftFootP.position,-transform.up*groundCheckDistance);
+        RaycastHit2D righFoot = Physics2D.Raycast(rightFootP.position,-transform.up*groundCheckDistance);
+        Debug.DrawRay(leftFootP.position,-transform.up*groundCheckDistance);
+        Debug.DrawRay(rightFootP.position,-transform.up*groundCheckDistance);
+        if(leftFoot&&leftFoot.collider.tag=="Ground"||righFoot&&righFoot.collider.tag=="chain") 
         {
             return true;
         }
