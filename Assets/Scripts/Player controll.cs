@@ -30,13 +30,11 @@ public class Playercontroll : MonoBehaviour
         if(Input.GetKey(MoveRight)&&isGrounded&&math.abs(rb.velocity[0])<=math.abs(maxVelocity))
         {
             rb.AddForce(Vector2.right*force,ForceMode2D.Force);
-            Debug.Log("Right");
         }
         if(Input.GetKeyUp(MoveRight)&&isGrounded)rb.AddForce(Vector2.left*Baseforce,ForceMode2D.Force);
         if(Input.GetKey(MoveLeft)&&isGrounded&&math.abs(rb.velocity[0])<=maxVelocity)
         {
             rb.AddForce(Vector2.left*force,ForceMode2D.Force);
-            Debug.Log("Left");
         }
         if(Input.GetKeyUp(MoveRight)&&isGrounded)rb.AddForce(Vector2.left*Baseforce,ForceMode2D.Force);
         else if(isGrounded)rb.velocity=new Vector2(rb.velocity[0]/Drag,rb.velocity[1]);
@@ -51,10 +49,12 @@ public class Playercontroll : MonoBehaviour
         RaycastHit2D righFoot = Physics2D.Raycast(rightFootP.position,-transform.up*groundCheckDistance);
         Debug.DrawRay(leftFootP.position,-transform.up*groundCheckDistance);
         Debug.DrawRay(rightFootP.position,-transform.up*groundCheckDistance);
-        if(leftFoot&&leftFoot.collider.tag=="Ground"||righFoot&&righFoot.collider.tag=="chain") 
+        if(leftFoot&&leftFoot.collider.tag=="Ground"||righFoot&&righFoot.collider.tag=="Ground")
         {
+            Debug.Log("GG");
             return true;
         }
         else return false;
+
     }
 }
