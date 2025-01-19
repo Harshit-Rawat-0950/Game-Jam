@@ -6,6 +6,8 @@ using UnityEngine;
 public class FanScript : MonoBehaviour
 {
     [SerializeField] float airSpeed;
+    
+    [SerializeField] public float airForce;
     void Start()
     {
         
@@ -23,7 +25,7 @@ public class FanScript : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             Rigidbody2D playerRB = other.gameObject.GetComponent<Rigidbody2D>();
-            playerRB.velocity += new Vector2(0, 10);
+            playerRB.velocity += new Vector2(0, airSpeed);
 
         }    
     }
@@ -32,12 +34,16 @@ public class FanScript : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             Rigidbody2D playerRB = other.gameObject.GetComponent<Rigidbody2D>();
-            playerRB.velocity += new Vector2(0, 10);
+            playerRB.AddForce(Vector2.up*(airForce+10),ForceMode2D.Force);
 
         }    
     }
 
     // Update is called once per frame
+    public void setAirforce()
+    {
+        airForce=12;
+    }
     void Update()
     {
         
