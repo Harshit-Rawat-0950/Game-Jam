@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 64326517}
   m_Layer: 0
   m_Name: Chain element (4)
-  m_TagString: chain
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4945,7 +4945,7 @@ GameObject:
   - component: {fileID: 671574425}
   m_Layer: 0
   m_Name: Chain element (3)
-  m_TagString: chain
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5654,11 +5654,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09de9f842129bcc46ab262b6b09427d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 805767872}
   leftFootP: {fileID: 1997478613}
   rightFootP: {fileID: 1211287275}
-  jump: 273
-  MoveRight: 275
-  MoveLeft: 276
+  jump: 119
+  MoveRight: 100
+  MoveLeft: 97
   MoveDown: 0
   rb: {fileID: 805767868}
   airFactor: 0.75
@@ -6222,11 +6223,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09de9f842129bcc46ab262b6b09427d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 925311366}
   leftFootP: {fileID: 1580316038}
   rightFootP: {fileID: 410825427}
-  jump: 119
-  MoveRight: 100
-  MoveLeft: 97
+  jump: 273
+  MoveRight: 275
+  MoveLeft: 276
   MoveDown: 0
   rb: {fileID: 925311362}
   airFactor: 0.75
@@ -7599,7 +7601,7 @@ GameObject:
   - component: {fileID: 1558186693}
   m_Layer: 0
   m_Name: Chain element (4)
-  m_TagString: chain
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8513,7 +8515,7 @@ GameObject:
   - component: {fileID: 1852824632}
   m_Layer: 0
   m_Name: Chain element (3)
-  m_TagString: chain
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

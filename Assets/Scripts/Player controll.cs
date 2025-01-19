@@ -8,8 +8,8 @@ using UnityEngine;
 
 public class Playercontroll : MonoBehaviour
 {
+    [SerializeField] Animator anim;
     [SerializeField] Transform leftFootP;
-    
     [SerializeField] Transform rightFootP;
     [SerializeField] KeyCode jump;
     [SerializeField] KeyCode MoveRight;
@@ -37,26 +37,33 @@ public class Playercontroll : MonoBehaviour
 
         if(isGrounded)
         {
+            anim.SetBool("isJumping", false);
             force=Baseforce*(maxGroundVelocity*xInput-velocity.x);
             if(xInput > 0 && math.abs(rb.velocity[0])<=math.abs(maxGroundVelocity))
             {
+                anim.SetBool("isWalking", true);
                 rb.AddForce(Vector2.right*force,ForceMode2D.Force);
             }
             else if (xInput < 0 &&math.abs(rb.velocity[0])<=maxGroundVelocity)
             {
+                anim.SetBool("isWalking", true);
                 rb.AddForce(Vector2.right*force,ForceMode2D.Force);
             }
             else
             {
+                anim.SetBool("isWalking", false);
                 rb.velocity=new Vector2(rb.velocity[0]/Drag,rb.velocity[1]);
             }
             if(Input.GetKeyDown(jump)){
+                anim.SetBool("isJumping", true);
                 rb.AddForce(Vector2.up*jumpForce,ForceMode2D.Impulse);
                 Debug.Log("Jumped");
             }
         }
         else
         {
+            anim.SetBool("isWalking", false);
+            anim.SetBool("isJumping", true);
             force=Baseforce*(maxAirVelocity*xInput-velocity.x);
             if(xInput > 0 && math.abs(rb.velocity[0])<=math.abs(maxAirVelocity))
             {
@@ -71,6 +78,32 @@ public class Playercontroll : MonoBehaviour
                 rb.velocity=new Vector2(rb.velocity[0]/Drag,rb.velocity[1]);
             }
         }
+
+        if(anim.GetBool("isJumping"))
+        {
+            if(velocity.y >= 0)
+            {
+                anim.SetBool("isRising", true);
+            }
+            else
+            {
+                anim.SetBool("isRising", false);
+            }
+        }
+        else
+        {
+            anim.SetBool("isRising", false);
+        }
+
+        if(anim.GetBool("isRising") || anim.GetBool("isJumping") || anim.GetBool("isWalking"))
+        {
+            anim.SetBool("isIdle", false);
+        }
+        else
+        {
+            anim.SetBool("isIdle", true);
+        }
+
     }
     bool checkforground()
     {
