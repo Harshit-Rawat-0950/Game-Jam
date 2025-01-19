@@ -6,6 +6,7 @@ using UnityEngine;
 public class Lever_fan : MonoBehaviour
 {
     [SerializeField] FanScript fanScript;
+    [SerializeField] AudioManager audiomanager;
     Animator anim;
     public bool deactivated=true;
     float count=0.2f;
@@ -16,13 +17,12 @@ public class Lever_fan : MonoBehaviour
         anim.SetBool("Activated",!deactivated);
     }
     void OnTriggerEnter2D(Collider2D other){
-        Debug.Log("Enter");
+   
         if(deactivated&&other.tag=="Player"){
+            audiomanager.lever();
             fanScript.setAirforce();
             anim.SetBool("Moving",true);
             deactivated=false;
-            Debug.Log(deactivated);
-            
             }
     }
 }

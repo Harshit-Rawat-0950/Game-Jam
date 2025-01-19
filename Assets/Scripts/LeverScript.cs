@@ -6,6 +6,7 @@ using UnityEngine;
 public class LeverScript : MonoBehaviour
 {
     [SerializeField] Door dr;
+    [SerializeField] AudioManager audiomanager;
     Animator anim;
     public bool deactivated=true;
     float count=0.2f;
@@ -18,6 +19,7 @@ public class LeverScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         Debug.Log("Enter");
         if(deactivated&&other.tag=="Player"){
+            audiomanager.lever();
             dr.move();
             anim.SetBool("Moving",true);
             deactivated=false;

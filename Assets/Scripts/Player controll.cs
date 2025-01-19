@@ -8,6 +8,7 @@ using UnityEngine;
 
 public class Playercontroll : MonoBehaviour
 {
+    [SerializeField] KeyCode quit;
     [SerializeField] Animator anim;
     [SerializeField] Transform leftFootP;
     [SerializeField] Transform rightFootP;
@@ -26,14 +27,15 @@ public class Playercontroll : MonoBehaviour
 
     public Vector2 velocity { get; private set; }
     float force;
-    public bool isGrounded=true;
+    public bool isGrounded = true;
     void Update()
     {
         velocity = rb.velocity;
         float xInput = 0;
 
         xInput = (Input.GetKey(MoveRight)?1:0) - (Input.GetKey(MoveLeft)?1:0);
-        isGrounded=checkforground();
+        print(isGrounded);
+        isGrounded = checkforground();
 
         if(isGrounded)
         {
@@ -43,11 +45,14 @@ public class Playercontroll : MonoBehaviour
             {
                 anim.SetBool("isWalking", true);
                 rb.AddForce(Vector2.right*force,ForceMode2D.Force);
+                transform.localScale = new Vector3(1 * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+
             }
             else if (xInput < 0 &&math.abs(rb.velocity[0])<=maxGroundVelocity)
             {
                 anim.SetBool("isWalking", true);
                 rb.AddForce(Vector2.right*force,ForceMode2D.Force);
+                transform.localScale = new Vector3(-1 * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
             else
             {
@@ -57,7 +62,6 @@ public class Playercontroll : MonoBehaviour
             if(Input.GetKeyDown(jump)){
                 anim.SetBool("isJumping", true);
                 rb.AddForce(Vector2.up*jumpForce,ForceMode2D.Impulse);
-                Debug.Log("Jumped");
             }
         }
         else
@@ -68,14 +72,21 @@ public class Playercontroll : MonoBehaviour
             if(xInput > 0 && math.abs(rb.velocity[0])<=math.abs(maxAirVelocity))
             {
                 rb.AddForce(Vector2.right*force*airFactor,ForceMode2D.Force);
+                transform.localScale = new Vector3(1 * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+
             }
             else if (xInput < 0 &&math.abs(rb.velocity[0])<=maxAirVelocity)
             {
                 rb.AddForce(Vector2.right*force*airFactor,ForceMode2D.Force);
+                transform.localScale = new Vector3(-1 * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
             else
             {
                 rb.velocity=new Vector2(rb.velocity[0]/Drag,rb.velocity[1]);
+            }
+            if(Input.GetKey(MoveDown))
+            {
+                rb.AddForce(-transform.up*0.5f, ForceMode2D.Force);
             }
         }
 
@@ -103,6 +114,9 @@ public class Playercontroll : MonoBehaviour
         {
             anim.SetBool("isIdle", true);
         }
+        if(Input.GetKey(quit))
+        Application.Quit();
+
 
     }
     bool checkforground()
@@ -113,12 +127,11 @@ public class Playercontroll : MonoBehaviour
         RaycastHit2D rightFoot = Physics2D.Raycast(rightFootP.position,-transform.up, groundCheckDistance);
         Debug.DrawRay(rightFootP.position,-transform.up*groundCheckDistance);
         
-        if((leftFoot || rightFoot) ) 
+        if(leftFoot || rightFoot ) 
         {
-            if(leftFoot.collider.tag == "Ground" || leftFoot.collider.tag == "chain" || rightFoot.collider.tag == "Ground" || rightFoot.collider.tag == "chain" )
+            if(leftFoot.collider.tag == "Ground" || rightFoot.collider.tag == "Ground")
             {
-
-                // Debug.Log("GG");
+                Debug.Log("GG" + anim);
                 return true;
             }
         }
@@ -127,6 +140,8 @@ public class Playercontroll : MonoBehaviour
 
         return false;
     }
+
+    
 
 
 }

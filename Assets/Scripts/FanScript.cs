@@ -6,11 +6,15 @@ using UnityEngine;
 public class FanScript : MonoBehaviour
 {
     [SerializeField] float airSpeed;
+    [SerializeField] AudioManager audiomanager;
     
     [SerializeField] public float airForce;
+    ParticleSystem particleSystem;
+    public bool stop;
     void Start()
     {
-        
+        particleSystem = GetComponent<ParticleSystem>();
+        if(stop) particleSystem.Stop();  
     }
     // void onCollisionEnter(Collision collision)    
     // {
@@ -26,11 +30,11 @@ public class FanScript : MonoBehaviour
         {
             Rigidbody2D playerRB = other.gameObject.GetComponent<Rigidbody2D>();
             playerRB.velocity += new Vector2(0, airSpeed);
-
+            audiomanager.wind();
         }    
     }
     private void OnTriggerStay2D(Collider2D other) {
-        print("Inside Wind");
+
         if(other.gameObject.tag == "Player")
         {
             Rigidbody2D playerRB = other.gameObject.GetComponent<Rigidbody2D>();
@@ -38,11 +42,16 @@ public class FanScript : MonoBehaviour
 
         }    
     }
+    private void OnTriggerExit2D()
+    {
+        audiomanager.stop();
+    }
 
     // Update is called once per frame
     public void setAirforce()
     {
         airForce=12;
+        particleSystem.Play();
     }
     void Update()
     {

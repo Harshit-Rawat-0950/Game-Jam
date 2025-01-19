@@ -5,8 +5,15 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     [SerializeField] AudioSource musicSource;
+    [SerializeField] AudioSource SFX;
+    
     // Start is called before the first frame update
-    public AudioClip Background;
+    [SerializeField]public AudioClip Background;
+    [SerializeField]public AudioClip click;
+    [SerializeField]public AudioClip ratle;
+    [SerializeField]public AudioClip switcch;
+    [SerializeField]public AudioClip windd;
+
 
     void Start()
     {
@@ -14,9 +21,23 @@ public class AudioManager : MonoBehaviour
         musicSource.Play();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void resetSound()
     {
-        
+        SFX.clip=click;
+        SFX.Play();
+    }
+    public void lever()
+    {
+        SFX.clip=switcch;
+        SFX.Play();
+    }
+    public void wind()
+    {
+        SFX.clip=windd;
+        SFX.Play();
+    }
+    public void stop()
+    {
+        SFX.Stop();
     }
 }

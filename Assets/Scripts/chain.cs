@@ -19,7 +19,6 @@ public class chain : MonoBehaviour
         Vector3 currentScale = transform.localScale;
         if(Input.GetKey(KeyCode.S))
         {
-            print("Running");
             if(Input.GetKeyDown(KeyCode.K))
             {
                 transform.localScale += new Vector3(0,incScale,0);
