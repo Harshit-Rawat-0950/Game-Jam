@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - chain
+  - Door
   layers:
   - Default
   - TransparentFX
