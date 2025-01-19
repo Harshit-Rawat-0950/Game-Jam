@@ -17,17 +17,6 @@ public class LeverScript : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    void OnCollisionEnter(Collision other)
-    {
-
-        // if(other.tag=="Player"&&deactivated)
-        // {
-            Debug.Log("player hit");
-            leverpulled();
-            // deactivated=false;
-        // }
-        // Debug.Log("Hit");
-    }
     void Update(){
         // count+=Time.deltaTime;
         if(deactivated)
