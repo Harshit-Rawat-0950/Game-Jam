@@ -7,33 +7,22 @@ public class LeverScript : MonoBehaviour
 {
     [SerializeField] Door dr;
     Animator anim;
-    [SerializeField] Collider2D lever;
     public bool deactivated=true;
     float count=0.2f;
-
-    void Start()
-    {
-        anim.SetBool("idle_deactivated",true);
-        anim = GetComponent<Animator>();
+    void Start(){
+        anim=GetComponent<Animator>();
     }
-
     void Update(){
-        // count+=Time.deltaTime;
-        if(deactivated)
-        {   
-            // anim.SetBool("lever_animation",false);
-        }
-        if(count>0.2f&&!deactivated){
-        // anim.SetBool("idle_acticated",true);
-        // anim.SetBool("lever_animation",false);
-        }
+        anim.SetBool("Activated",!deactivated);
     }
-    void leverpulled()
-    {
-        Debug.Log("asdf");
-        // anim.SetBool("lever_animation",true);
-        // anim.SetBool("idle_deactivated",false);
-        count=0f;
-        dr.move();
+    void OnTriggerEnter2D(Collider2D other){
+        Debug.Log("Enter");
+        if(deactivated&&other.tag=="Player"){
+            dr.move();
+            anim.SetBool("Moving",true);
+            deactivated=false;
+            Debug.Log(deactivated);
+            
+            }
     }
 }
